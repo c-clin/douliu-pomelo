@@ -165,7 +165,15 @@
 }
 
 .story {
-  background-color: $color-grey-light-1;
+  background-image: linear-gradient(
+      to right,
+      rgba(225, 225, 225, 0.93),
+      rgba(225, 225, 225, 0.93)
+    ),
+    url(../img/pomelo-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 
   &__block {
     background-color: #fff;

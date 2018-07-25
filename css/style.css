@@ -218,7 +218,10 @@ body {
         transform: rotate(0); }
 
 .story {
-  background-color: #faf9f9; }
+  background-image: linear-gradient(to right, rgba(225, 225, 225, 0.93), rgba(225, 225, 225, 0.93)), url(../img/pomelo-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
   .story__block {
     background-color: #fff;
     border-radius: 3px;
