@@ -31,16 +31,11 @@ $(document).ready(function() {
     $('.album-trigger').on('click', function(event) {
       event.preventDefault();
       $('#album-modal').html(
-        `<img src="./img/album-${event.target.id}.jpg" width="940">`
+        `<img src="./img/album-${event.target.id}.jpg" width="840">`
       );
       $('#album-modal').iziModal('setZindex', 99999);
       $('#album-modal').iziModal('open', { zindex: 99999 });
       $('#album-modal').iziModal('open');
     });
   }
-
-  // if ($(window).width() < 1200) {
-  //   $('.album__list--photo').removeClass('album-trigger');
-  //   console.log('removed');
-  // }
 });

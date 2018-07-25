@@ -10,6 +10,7 @@
   background-attachment: fixed;
   background-position: center center;
   height: 100vh;
+  overflow: hidden;
 
   @media only screen and (max-width: 900px) {
     background-attachment: scroll !important;
@@ -32,9 +33,14 @@
       font-size: 1.2rem;
     }
 
+    @media only screen and (max-width: 500px) {
+      display: none;
+    }
+
     span {
       &:first-child {
         margin-right: 3rem;
+        margin-left: -3rem;
       }
     }
   }
@@ -47,6 +53,12 @@
     background-color: rgba(0, 0, 0, 0.3);
     transition: all 0.6s;
     padding: 2rem 0 2rem 0;
+
+    @media only screen and (max-width: 500px) {
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
 
     &__list {
       list-style: none;
@@ -311,10 +323,10 @@
         background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
-
         color: transparent;
         font-size: 5.5rem;
         margin-bottom: 3rem;
+        transition: all 0.3s;
       }
 
       &--text {
@@ -325,6 +337,151 @@
       &:hover {
         transform: scale(1.05) translateY(-15px);
         box-shadow: 0, 1rem 3rem rgba(0, 0, 0, 0.3);
+
+        .heading-tertiary {
+          color: $color-primary-orange;
+          transition: all 0.3s;
+        }
+
+        i {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+.pricing {
+  background-color: $color-grey-light-1;
+  padding: 7rem 7rem;
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+
+    @media only screen and (max-width: 800px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .price-box {
+    font-size: 2.3rem;
+    background-color: #fff;
+    flex: 0 0 25%;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    color: $color-grey-dark-1;
+    transition: all 0.3s;
+
+    @media only screen and (max-width: 1200px) {
+      flex: 0 0 30%;
+      font-size: 1.8rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+      width: 60%;
+
+      &:not(:last-child) {
+        margin-bottom: 5rem;
+      }
+    }
+
+    @media only screen and (max-width: 550px) {
+      width: 90%;
+    }
+
+    &:hover {
+      transform: translateY(10px) scale(1.07);
+      box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.35);
+
+      .price-box__title {
+        color: $color-primary-orange-dark;
+      }
+    }
+
+    &__image {
+      background-size: cover;
+      height: 23rem;
+      border-radius: 3px;
+
+      @media only screen and (max-width: 1000px) {
+        height: 20rem;
+      }
+
+      &--1 {
+        background-image: url(../img/price-1.jpg);
+      }
+
+      &--2 {
+        background-image: url(../img/price-1.jpg);
+      }
+
+      &--3 {
+        background-image: url(../img/price-1.jpg);
+      }
+    }
+
+    &__title {
+      border-bottom: 1px solid $color-grey-light-3;
+      padding: 1.5rem;
+      background-color: $color-grey-light-2;
+      font-size: 3.5rem;
+      transition: all 0.3s;
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 3rem;
+      }
+    }
+
+    &__details {
+      padding: 3rem;
+      border-bottom: 1px solid $color-grey-light-3;
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        text-align: left;
+        margin-left: 7rem;
+        font-size: 2rem;
+
+        @media only screen and (max-width: 1200px) {
+          margin-left: 1rem;
+          font-size: 1.9rem;
+        }
+
+        i {
+          color: $color-primary-orange;
+          font-size: 2.1rem;
+
+          @media only screen and (max-width: 1200px) {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+
+    &__price {
+      padding: 1.5rem;
+      font-weight: 300;
+      color: $color-primary-orange;
+      font-size: 5rem;
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 4.3rem;
+      }
+
+      p {
+        margin-left: 2rem;
+      }
+
+      span {
+        font-size: 2rem;
       }
     }
   }
@@ -364,7 +521,7 @@
       }
 
       &:hover img {
-        transform: scale(1);
+        transform: scale(1.01);
         opacity: 1;
         cursor: pointer;
       }
