@@ -62,6 +62,12 @@ body {
   text-align: center;
   font-size: 4rem;
   font-weight: 300; }
+  @media only screen and (max-width: 700px) {
+    .heading-secondary {
+      font-size: 3.5rem; } }
+  @media only screen and (max-width: 500px) {
+    .heading-secondary {
+      font-size: 3rem; } }
   .heading-secondary.light {
     color: #faf9f9; }
   .heading-secondary.dark {
@@ -77,6 +83,9 @@ body {
 .heading-tertiary {
   font-size: 2.4rem;
   color: #333; }
+  @media only screen and (max-width: 500px) {
+    .heading-tertiary {
+      font-size: 2.1rem; } }
 
 #album-modal {
   text-align: center;
@@ -92,6 +101,10 @@ body {
   background-attachment: fixed;
   background-position: center center;
   height: 100vh; }
+  @media only screen and (max-width: 900px) {
+    .header {
+      background-attachment: scroll !important;
+      background-position: 50% !important; } }
   .header .contact-info {
     position: absolute;
     width: 100%;
@@ -103,6 +116,9 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3); }
+    @media only screen and (max-width: 600px) {
+      .header .contact-info {
+        font-size: 1.2rem; } }
     .header .contact-info span:first-child {
       margin-right: 3rem; }
   .header .navigation {
@@ -120,6 +136,9 @@ body {
     .header .navigation__item {
       display: inline-block;
       font-size: 2.5rem; }
+      @media only screen and (max-width: 600px) {
+        .header .navigation__item {
+          font-size: 2.1rem; } }
       .header .navigation__item:not(:last-child) {
         margin-right: 3rem; }
       .header .navigation__item a {
@@ -155,6 +174,9 @@ body {
     .header .text-box .heading-primary {
       font-size: 5rem;
       animation: moveInLeft 1s ease-out; }
+      @media only screen and (max-width: 700px) {
+        .header .text-box .heading-primary {
+          font-size: 4rem; } }
     .header .text-box .heading-primary-sub {
       position: relative;
       margin-right: -17px;
@@ -166,6 +188,9 @@ body {
       animation-fill-mode: backwards;
       animation-delay: 0.5s;
       z-index: 50; }
+      @media only screen and (max-width: 700px) {
+        .header .text-box .heading-primary-sub {
+          font-size: 2.5rem; } }
     .header .text-box i {
       margin-top: 2rem;
       color: rgba(255, 255, 0, 0.9);
@@ -176,6 +201,9 @@ body {
       animation: moveInTop 1s ease-out;
       animation-fill-mode: backwards;
       animation-delay: 1s; }
+      @media only screen and (max-width: 700px) {
+        .header .text-box i {
+          font-size: 5.2rem; } }
       .header .text-box i:hover {
         transform: rotate(0); }
 
@@ -202,6 +230,12 @@ body {
       transform: skewX(12deg);
       overflow: hidden;
       box-sizing: content-box; }
+      @media only screen and (max-width: 1200px) {
+        .story__block__image {
+          border: 6px solid #e67e22; } }
+      @media only screen and (max-width: 900px) {
+        .story__block__image {
+          border: 4px solid #e67e22; } }
       .story__block__image img {
         width: 100%;
         height: 100%;
@@ -224,7 +258,7 @@ body {
         color: #faf9f9;
         font-weight: 300; }
     .story__block__text {
-      font-size: 1.1rem;
+      font-size: 1.5rem;
       transform: translateX(3rem) skewX(12deg); }
 
 .introduction {
@@ -235,10 +269,17 @@ body {
   background-position: center center;
   padding: 7rem 7rem;
   box-shadow: 0, 1rem 3rem rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 900px) {
+    .introduction {
+      background-attachment: scroll !important;
+      background-position: 20% !important; } }
   .introduction .pomelo-intro {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
+    @media only screen and (max-width: 800px) {
+      .introduction .pomelo-intro {
+        justify-content: center; } }
     .introduction .pomelo-intro__item {
       width: 250px;
       background-color: rgba(225, 225, 225, 0.8);
@@ -271,6 +312,9 @@ body {
   flex-wrap: wrap; }
   .album__list li {
     flex: 0 0 25%; }
+    @media only screen and (max-width: 650px) {
+      .album__list li {
+        flex: 0 0 100%; } }
   .album__list--photo {
     width: 100%;
     margin: 0;
@@ -282,6 +326,9 @@ body {
       height: auto;
       transform: scale(1.15);
       transition: all 0.5s; }
+      @media only screen and (max-width: 650px) {
+        .album__list--photo img {
+          opacity: 1; } }
     .album__list--photo:hover img {
       transform: scale(1);
       opacity: 1;

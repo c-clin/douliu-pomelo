@@ -11,6 +11,11 @@
   background-position: center center;
   height: 100vh;
 
+  @media only screen and (max-width: 900px) {
+    background-attachment: scroll !important;
+    background-position: 50% !important;
+  }
+
   .contact-info {
     position: absolute;
     width: 100%;
@@ -22,6 +27,10 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.2rem;
+    }
 
     span {
       &:first-child {
@@ -48,6 +57,10 @@
     &__item {
       display: inline-block;
       font-size: 2.5rem;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 2.1rem;
+      }
 
       &:not(:last-child) {
         margin-right: 3rem;
@@ -94,6 +107,10 @@
     .heading-primary {
       font-size: 5rem;
       animation: moveInLeft 1s ease-out;
+
+      @media only screen and (max-width: 700px) {
+        font-size: 4rem;
+      }
     }
 
     .heading-primary-sub {
@@ -107,6 +124,10 @@
       animation-fill-mode: backwards;
       animation-delay: 0.5s;
       z-index: 50;
+
+      @media only screen and (max-width: 700px) {
+        font-size: 2.5rem;
+      }
     }
 
     i {
@@ -119,6 +140,10 @@
       animation: moveInTop 1s ease-out;
       animation-fill-mode: backwards;
       animation-delay: 1s;
+
+      @media only screen and (max-width: 700px) {
+        font-size: 5.2rem;
+      }
 
       &:hover {
         transform: rotate(0);
@@ -153,6 +178,14 @@
       overflow: hidden;
       box-sizing: content-box;
 
+      @media only screen and (max-width: 1200px) {
+        border: 6px solid $color-primary-orange;
+      }
+
+      @media only screen and (max-width: 900px) {
+        border: 4px solid $color-primary-orange;
+      }
+
       img {
         width: 100%;
         height: 100%;
@@ -186,7 +219,7 @@
     }
 
     &__text {
-      font-size: 1.1rem;
+      font-size: 1.5rem;
       transform: translateX(3rem) skewX(12deg);
     }
   }
@@ -206,10 +239,19 @@
   padding: 7rem 7rem;
   box-shadow: 0, 1rem 3rem rgba(0, 0, 0, 0.2);
 
+  @media only screen and (max-width: 900px) {
+    background-attachment: scroll !important;
+    background-position: 20% !important;
+  }
+
   .pomelo-intro {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media only screen and (max-width: 800px) {
+      justify-content: center;
+    }
 
     &__item {
       width: 250px;
@@ -259,6 +301,10 @@
 
     li {
       flex: 0 0 25%;
+
+      @media only screen and (max-width: 650px) {
+        flex: 0 0 100%;
+      }
     }
 
     &--photo {
@@ -273,6 +319,10 @@
         height: auto;
         transform: scale(1.15);
         transition: all 0.5s;
+
+        @media only screen and (max-width: 650px) {
+          opacity: 1;
+        }
       }
 
       &:hover img {

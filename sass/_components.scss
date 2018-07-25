@@ -16,8 +16,15 @@
 .heading-secondary {
   text-align: center;
   font-size: 4rem;
-
   font-weight: 300;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 3.5rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    font-size: 3rem;
+  }
 
   &.light {
     color: $color-grey-light-1;
@@ -40,6 +47,10 @@
 .heading-tertiary {
   font-size: 2.4rem;
   color: $color-grey-dark-1;
+
+  @media only screen and (max-width: 500px) {
+    font-size: 2.1rem;
+  }
 }
 
 #album-modal {

@@ -27,20 +27,20 @@ $(document).ready(function() {
 
   // open modal to view images
   $('#album-modal').iziModal({ width: 1000 });
-
-  $('.album-trigger').on('click', function(event) {
-    console.log(event.target.id);
-    event.preventDefault();
-    $('#album-modal').html(
-      `<img src="./img/album-${event.target.id}.jpg" width="940">`
-    );
-    $('#album-modal').iziModal('setZindex', 99999);
-    $('#album-modal').iziModal('open', { zindex: 99999 });
-    $('#album-modal').iziModal('open');
-  });
-
-  if ($(window).width() < 1200) {
-    $('.album__list--photo').removeClass('album-trigger');
-    console.log('removed');
+  if ($(window).width() > 1200) {
+    $('.album-trigger').on('click', function(event) {
+      event.preventDefault();
+      $('#album-modal').html(
+        `<img src="./img/album-${event.target.id}.jpg" width="940">`
+      );
+      $('#album-modal').iziModal('setZindex', 99999);
+      $('#album-modal').iziModal('open', { zindex: 99999 });
+      $('#album-modal').iziModal('open');
+    });
   }
+
+  // if ($(window).width() < 1200) {
+  //   $('.album__list--photo').removeClass('album-trigger');
+  //   console.log('removed');
+  // }
 });
