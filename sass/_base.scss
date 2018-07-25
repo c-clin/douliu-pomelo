@@ -1,0 +1,26 @@
+$color-primary-orange: #e67e22;
+
+$color-grey-light-1: #faf9f9;
+$color-grey-dark-1: #555555;
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px;
+}
+
+body {
+  font-family: '微軟正黑體', 'Microsoft JhengHei', Tahoma, Verdana, Arial,
+    sans-serif;
+}

@@ -1,0 +1,150 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: '微軟正黑體', 'Microsoft JhengHei', Tahoma, Verdana, Arial, sans-serif; }
+
+.header-sticky {
+  position: fixed !important;
+  width: 100%;
+  left: 0;
+  top: 0 !important;
+  z-index: 99999;
+  transition: all 0.6s;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  padding: 1.5rem 0 1.5rem 0 !important; }
+
+.section {
+  padding: 7rem 0; }
+
+.heading-secondary {
+  text-align: center;
+  font-size: 5rem;
+  color: #555555;
+  font-weight: 300; }
+  .heading-secondary::after {
+    content: ' ';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #e67e22;
+    margin: 30px auto 60px auto; }
+
+.header {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/pomelo-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  height: 100vh; }
+  .header .contact-info {
+    position: absolute;
+    width: 100%;
+    color: #faf9f9;
+    font-size: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3); }
+    .header .contact-info span:first-child {
+      margin-right: 3rem; }
+  .header .navigation {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.6s;
+    padding: 3rem 0 3rem 0; }
+    .header .navigation__list {
+      list-style: none;
+      display: flex;
+      justify-content: center; }
+    .header .navigation__item {
+      display: inline-block;
+      font-size: 3rem; }
+      .header .navigation__item:not(:last-child) {
+        margin-right: 3rem; }
+      .header .navigation__item a {
+        text-decoration: none;
+        color: #faf9f9;
+        transition: all 0.3s;
+        position: relative;
+        font-weight: 300; }
+        .header .navigation__item a:hover {
+          color: #e67e22; }
+          .header .navigation__item a:hover::after {
+            width: 100%; }
+        .header .navigation__item a::after {
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 0%;
+          content: '.';
+          color: transparent;
+          height: 2px;
+          transition: all 0.5s;
+          background: #e67e22; }
+  .header .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; }
+    .header .text-box .heading-primary {
+      font-size: 6rem; }
+
+.story {
+  background-color: #faf9f9; }
+  .story__block {
+    background-color: #fff;
+    width: 60%;
+    margin: 0 auto;
+    transform: skewX(-12deg);
+    display: flex;
+    align-items: center;
+    padding: 6rem;
+    margin-bottom: 9rem;
+    box-shadow: 1rem 1.5rem 5rem rgba(0, 0, 0, 0.15); }
+    .story__block__image {
+      position: relative;
+      width: 50rem;
+      border-radius: 50%;
+      box-sizing: content-box;
+      border: 6px solid #e67e22;
+      border-radius: 50%;
+      transform: skewX(12deg);
+      overflow: hidden;
+      box-sizing: content-box; }
+      .story__block__image img {
+        width: 100%;
+        height: 100%;
+        transform: scale(1.03);
+        transition: all 0.3s; }
+      .story__block__image:hover img {
+        transform: scale(1.1);
+        filter: blur(5px) brightness(50%); }
+      .story__block__image:hover figcaption {
+        transform: translate(-50%, -50%);
+        opacity: 1; }
+      .story__block__image figcaption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 300%);
+        opacity: 0;
+        transition: all 0.3s;
+        font-size: 3.5rem;
+        color: #faf9f9;
+        font-weight: 300; }
+    .story__block__text {
+      font-size: 1.5rem;
+      transform: translateX(3rem) skewX(12deg); }
