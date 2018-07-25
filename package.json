@@ -11,5 +11,7 @@
   "devDependencies": {
     "node-sass": "^4.9.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "izimodal": "^1.5.1"
+  }
 }
