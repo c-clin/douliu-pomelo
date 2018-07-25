@@ -1,7 +1,10 @@
 $color-primary-orange: #e67e22;
+$color-primary-orange-dark: #e06900;
+$color-primary-orange-light: #ff902e;
 
 $color-grey-light-1: #faf9f9;
-$color-grey-dark-1: #555555;
+$color-grey-dark-1: #333333;
+$color-grey-dark-2: #555555;
 
 @mixin absCenter {
   position: absolute;
@@ -23,4 +26,55 @@ html {
 body {
   font-family: '微軟正黑體', 'Microsoft JhengHei', Tahoma, Verdana, Arial,
     sans-serif;
+}
+
+// animations
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+
+  80% {
+    transform: translateX(-25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+
+  80% {
+    transform: translateY(-25px);
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    transform: rotate(-25deg);
+  }
 }
