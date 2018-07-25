@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "surge": "surge --domain douliu-pomelo.surge.sh"
   },
   "author": "",
   "license": "ISC",

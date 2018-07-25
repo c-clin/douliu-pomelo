@@ -1,10 +1,10 @@
 $color-primary-orange: #e67e22;
 $color-primary-orange-dark: #e06900;
-$color-primary-orange-light: #ff902e;
+$color-primary-orange-light: #ffae00;
 
 $color-grey-light-1: #faf9f9;
-$color-grey-dark-1: #333333;
-$color-grey-dark-2: #555555;
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #555;
 
 @mixin absCenter {
   position: absolute;
@@ -21,6 +21,10 @@ $color-grey-dark-2: #555555;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px;
+
+  @media only screen and (max-width: 1100) {
+    font-size: 50%;
+  }
 }
 
 body {
