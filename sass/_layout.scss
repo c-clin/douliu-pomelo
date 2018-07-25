@@ -167,6 +167,18 @@
     margin-bottom: 9rem;
     box-shadow: 1rem 1.5rem 5rem rgba(0, 0, 0, 0.15);
 
+    @media only screen and (max-width: 900px) {
+      transform: skewX(-6deg);
+    }
+
+    @media only screen and (max-width: 750px) {
+      flex-direction: column;
+    }
+
+    @media only screen and (max-width: 600px) {
+      transform: skewX(0);
+    }
+
     &__image {
       position: relative;
       width: 50rem;
@@ -184,6 +196,15 @@
 
       @media only screen and (max-width: 900px) {
         border: 4px solid $color-primary-orange;
+        transform: skewX(6deg);
+      }
+
+      @media only screen and (max-width: 750px) {
+        width: 17rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        transform: skewX(0);
       }
 
       img {
@@ -221,6 +242,19 @@
     &__text {
       font-size: 1.5rem;
       transform: translateX(3rem) skewX(12deg);
+
+      @media only screen and (max-width: 900px) {
+        transform: translateX(3rem) skewX(6deg);
+      }
+
+      @media only screen and (max-width: 750px) {
+        transform: skewX(6deg);
+        margin: 3rem auto 0 1.5rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        transform: skewX(0);
+      }
     }
   }
 }
@@ -262,6 +296,10 @@
       text-align: center;
       transition: all 0.3s;
       margin-bottom: 3rem;
+
+      @media only screen and (max-width: 500px) {
+        width: 95%;
+      }
 
       i {
         background-image: linear-gradient(
@@ -364,9 +402,22 @@
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: 650px) {
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (max-width: 450px) {
+      flex-direction: column;
+    }
+
     span {
       &:first-child {
         margin-right: 3rem;
+
+        @media only screen and (max-width: 450px) {
+          margin-right: 0;
+          margin-block-end: 1rem;
+        }
       }
     }
   }

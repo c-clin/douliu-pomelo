@@ -220,6 +220,15 @@ body {
     padding: 6rem;
     margin-bottom: 9rem;
     box-shadow: 1rem 1.5rem 5rem rgba(0, 0, 0, 0.15); }
+    @media only screen and (max-width: 900px) {
+      .story__block {
+        transform: skewX(-6deg); } }
+    @media only screen and (max-width: 750px) {
+      .story__block {
+        flex-direction: column; } }
+    @media only screen and (max-width: 600px) {
+      .story__block {
+        transform: skewX(0); } }
     .story__block__image {
       position: relative;
       width: 50rem;
@@ -235,7 +244,14 @@ body {
           border: 6px solid #e67e22; } }
       @media only screen and (max-width: 900px) {
         .story__block__image {
-          border: 4px solid #e67e22; } }
+          border: 4px solid #e67e22;
+          transform: skewX(6deg); } }
+      @media only screen and (max-width: 750px) {
+        .story__block__image {
+          width: 17rem; } }
+      @media only screen and (max-width: 600px) {
+        .story__block__image {
+          transform: skewX(0); } }
       .story__block__image img {
         width: 100%;
         height: 100%;
@@ -260,6 +276,16 @@ body {
     .story__block__text {
       font-size: 1.5rem;
       transform: translateX(3rem) skewX(12deg); }
+      @media only screen and (max-width: 900px) {
+        .story__block__text {
+          transform: translateX(3rem) skewX(6deg); } }
+      @media only screen and (max-width: 750px) {
+        .story__block__text {
+          transform: skewX(6deg);
+          margin: 3rem auto 0 1.5rem; } }
+      @media only screen and (max-width: 600px) {
+        .story__block__text {
+          transform: skewX(0); } }
 
 .introduction {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/background.jpg);
@@ -289,6 +315,9 @@ body {
       text-align: center;
       transition: all 0.3s;
       margin-bottom: 3rem; }
+      @media only screen and (max-width: 500px) {
+        .introduction .pomelo-intro__item {
+          width: 95%; } }
       .introduction .pomelo-intro__item i {
         background-image: linear-gradient(to right bottom, #ffae00, #e06900);
         display: inline-block;
@@ -356,8 +385,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 650px) {
+      .footer .contact {
+        font-size: 1.4rem; } }
+    @media only screen and (max-width: 450px) {
+      .footer .contact {
+        flex-direction: column; } }
     .footer .contact span:first-child {
       margin-right: 3rem; }
+      @media only screen and (max-width: 450px) {
+        .footer .contact span:first-child {
+          margin-right: 0;
+          margin-block-end: 1rem; } }
   .footer .copyright {
     color: #faf9f9;
     font-size: 1.5rem; }
