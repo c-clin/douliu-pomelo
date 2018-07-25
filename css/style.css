@@ -474,6 +474,31 @@ body {
       opacity: 1;
       cursor: pointer; }
 
+.map-box {
+  position: relative; }
+  .map-box .map {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    z-index: 0; }
+  .map-box .contact-box {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(225, 225, 225, 0.85);
+    z-index: 10; }
+    @media only screen and (max-width: 1000px) {
+      .map-box .contact-box {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-color: #faf9f9;
+        transform: translateY(-30px); } }
+    .map-box .contact-box h2 {
+      margin-top: 3rem; }
+
 .footer {
   background: #333;
   padding: 3rem;

@@ -37,4 +37,32 @@ $(document).ready(function() {
       $('#album-modal').iziModal('open');
     });
   }
+
+  // maps
+  let map;
+
+  if ($(window).width() > 1000) {
+    map = new GMaps({
+      div: '.map',
+      lat: 23.6880699,
+      lng: 120.62,
+      zoom: 13
+    });
+  } else {
+    map = new GMaps({
+      div: '.map',
+      lat: 23.6880699,
+      lng: 120.5454033,
+      zoom: 13
+    });
+  }
+
+  map.addMarker({
+    lat: 23.6880699,
+    lng: 120.5454033,
+    title: '斗六嘉東文旦茂谷園',
+    infoWindow: {
+      content: '<p>斗六嘉東文旦茂谷園</p>'
+    }
+  });
 });
