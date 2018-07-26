@@ -348,7 +348,7 @@
 
         .heading-tertiary {
           color: $color-primary-orange;
-          transition: all 0.3s;
+          transition: color 0.5s;
         }
 
         i {
@@ -438,7 +438,7 @@
       padding: 1.5rem;
       background-color: $color-grey-light-2;
       font-size: 3.5rem;
-      transition: all 0.3s;
+      transition: color 0.5s;
 
       @media only screen and (max-width: 1200px) {
         font-size: 3rem;
@@ -539,6 +539,7 @@
 
 .map-box {
   position: relative;
+  background-color: $color-grey-light-1;
 
   .map {
     width: 100%;
@@ -559,13 +560,62 @@
     @media only screen and (max-width: 1000px) {
       position: relative;
       width: 100%;
-      height: auto;
+      height: 350px;
       background-color: $color-grey-light-1;
       transform: translateY(-30px);
     }
 
     h2 {
       margin-top: 3rem;
+
+      @media only screen and (max-width: 1000px) {
+        padding-top: 3rem;
+      }
+    }
+
+    &__info {
+      @include absCenter;
+      margin-top: 2rem;
+
+      @media only screen and (max-width: 1000px) {
+        margin-top: 6rem;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        font-size: 2.2rem;
+        font-weight: 300;
+        margin: 2rem auto;
+        color: $color-grey-dark-1;
+        transition: color 0.3s;
+
+        @media only screen and (max-width: 1000px) {
+          font-size: 1.8rem;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        i {
+          color: $color-primary-orange;
+          margin-right: 1rem;
+          transition: all 0.3s;
+        }
+
+        &:hover {
+          color: $color-primary-orange-light;
+
+          i {
+            transform: scale(1.2) rotate(-10deg);
+            color: $color-primary-orange-light;
+          }
+        }
+      }
     }
   }
 }
@@ -573,52 +623,11 @@
 .footer {
   background: $color-grey-dark-1;
   padding: 3rem;
-  height: 120px;
+  height: 60px;
   text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  .social-links {
-    margin: 0 auto;
-
-    .fb-icon {
-      color: rgba($color-grey-light-1, 0.7);
-      font-size: 3rem;
-      transition: color 0.2s;
-
-      &:hover {
-        color: $color-grey-light-1;
-      }
-    }
-  }
-
-  .contact {
-    color: $color-grey-light-1;
-    font-size: 1.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media only screen and (max-width: 650px) {
-      font-size: 1.4rem;
-    }
-
-    @media only screen and (max-width: 450px) {
-      flex-direction: column;
-    }
-
-    span {
-      &:first-child {
-        margin-right: 3rem;
-
-        @media only screen and (max-width: 450px) {
-          margin-right: 0;
-          margin-block-end: 1rem;
-        }
-      }
-    }
-  }
+  justify-content: center;
+  align-items: center;
 
   .copyright {
     color: $color-grey-light-1;

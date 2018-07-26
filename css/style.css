@@ -349,7 +349,7 @@ body {
         box-shadow: 0, 1rem 3rem rgba(0, 0, 0, 0.3); }
         .introduction .pomelo-intro__item:hover .heading-tertiary {
           color: #e67e22;
-          transition: all 0.3s; }
+          transition: color 1s; }
         .introduction .pomelo-intro__item:hover i {
           transform: scale(1.2); }
 
@@ -409,7 +409,7 @@ body {
       padding: 1.5rem;
       background-color: #fcfcfc;
       font-size: 3.5rem;
-      transition: all 0.3s; }
+      transition: color 1s; }
       @media only screen and (max-width: 1200px) {
         .pricing .price-box__title {
           font-size: 3rem; } }
@@ -475,7 +475,8 @@ body {
       cursor: pointer; }
 
 .map-box {
-  position: relative; }
+  position: relative;
+  background-color: #faf9f9; }
   .map-box .map {
     width: 100%;
     height: 500px;
@@ -493,46 +494,55 @@ body {
       .map-box .contact-box {
         position: relative;
         width: 100%;
-        height: auto;
+        height: 350px;
         background-color: #faf9f9;
         transform: translateY(-30px); } }
     .map-box .contact-box h2 {
       margin-top: 3rem; }
+      @media only screen and (max-width: 1000px) {
+        .map-box .contact-box h2 {
+          padding-top: 3rem; } }
+    .map-box .contact-box__info {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 2rem; }
+      @media only screen and (max-width: 1000px) {
+        .map-box .contact-box__info {
+          margin-top: 6rem; } }
+      .map-box .contact-box__info ul {
+        list-style: none; }
+      .map-box .contact-box__info li {
+        font-size: 2.2rem;
+        font-weight: 300;
+        margin: 2rem auto;
+        color: #333;
+        transition: color 0.3s; }
+        @media only screen and (max-width: 1000px) {
+          .map-box .contact-box__info li {
+            font-size: 1.8rem; } }
+        .map-box .contact-box__info li a {
+          text-decoration: none;
+          color: inherit; }
+        .map-box .contact-box__info li i {
+          color: #e67e22;
+          margin-right: 1rem;
+          transition: all 0.3s; }
+        .map-box .contact-box__info li:hover {
+          color: #ffae00; }
+          .map-box .contact-box__info li:hover i {
+            transform: scale(1.2) rotate(-10deg);
+            color: #ffae00; }
 
 .footer {
   background: #333;
   padding: 3rem;
-  height: 120px;
+  height: 60px;
   text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-  .footer .social-links {
-    margin: 0 auto; }
-    .footer .social-links .fb-icon {
-      color: rgba(250, 249, 249, 0.7);
-      font-size: 3rem;
-      transition: color 0.2s; }
-      .footer .social-links .fb-icon:hover {
-        color: #faf9f9; }
-  .footer .contact {
-    color: #faf9f9;
-    font-size: 1.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    @media only screen and (max-width: 650px) {
-      .footer .contact {
-        font-size: 1.4rem; } }
-    @media only screen and (max-width: 450px) {
-      .footer .contact {
-        flex-direction: column; } }
-    .footer .contact span:first-child {
-      margin-right: 3rem; }
-      @media only screen and (max-width: 450px) {
-        .footer .contact span:first-child {
-          margin-right: 0;
-          margin-block-end: 1rem; } }
+  justify-content: center;
+  align-items: center; }
   .footer .copyright {
     color: #faf9f9;
     font-size: 1.5rem; }
