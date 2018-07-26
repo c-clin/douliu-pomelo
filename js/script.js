@@ -1,3 +1,12 @@
+AOS.init({
+  disable: 'mobile',
+  initClassName: false,
+  useClassNames: false,
+  duration: 1200,
+  easing: 'ease-in-out',
+  once: true
+});
+
 $(document).ready(function() {
   // smooth scrolling
   $('.nav-link').click(function() {
@@ -18,11 +27,14 @@ $(document).ready(function() {
     if (st > lastScrollTop) {
       // downscroll code
       $('.navigation').addClass('header-sticky');
-    } else if ($(window).scrollTop() === 0) {
+    }
+
+    if ($(window).scrollTop() === 0) {
       $('.navigation').removeClass('header-sticky');
     }
     lastScrollTop = st;
   });
+  window;
 
   // open modal to view images
   $('#album-modal').iziModal({ width: 1000 });

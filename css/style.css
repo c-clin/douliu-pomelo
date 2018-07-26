@@ -320,7 +320,7 @@ body {
       .introduction .pomelo-intro {
         justify-content: center; } }
     .introduction .pomelo-intro__item {
-      width: 250px;
+      flex: 0 0 230px;
       background-color: rgba(225, 225, 225, 0.8);
       border-radius: 3px;
       font-size: 1.2rem;
@@ -349,7 +349,7 @@ body {
         box-shadow: 0, 1rem 3rem rgba(0, 0, 0, 0.3); }
         .introduction .pomelo-intro__item:hover .heading-tertiary {
           color: #e67e22;
-          transition: color 1s; }
+          transition: color 0.5s; }
         .introduction .pomelo-intro__item:hover i {
           transform: scale(1.2); }
 
@@ -409,7 +409,7 @@ body {
       padding: 1.5rem;
       background-color: #fcfcfc;
       font-size: 3.5rem;
-      transition: color 1s; }
+      transition: color 0.5s; }
       @media only screen and (max-width: 1200px) {
         .pricing .price-box__title {
           font-size: 3rem; } }
@@ -421,17 +421,20 @@ body {
       .pricing .price-box__details li {
         text-align: left;
         margin-left: 7rem;
-        font-size: 2rem; }
+        font-size: 2rem;
+        display: flex;
+        align-items: center; }
         @media only screen and (max-width: 1200px) {
           .pricing .price-box__details li {
             margin-left: 1rem;
             font-size: 1.9rem; } }
         .pricing .price-box__details li i {
           color: #e67e22;
-          font-size: 2.1rem; }
+          font-size: 1.5rem;
+          margin-right: 5px; }
           @media only screen and (max-width: 1200px) {
             .pricing .price-box__details li i {
-              font-size: 1.8rem; } }
+              font-size: 1.3rem; } }
     .pricing .price-box__price {
       padding: 1.5rem;
       font-weight: 300;
@@ -488,13 +491,13 @@ body {
     height: 100%;
     top: 0;
     right: 0;
-    background-color: rgba(225, 225, 225, 0.85);
+    background-color: rgba(225, 225, 225, 0.8);
     z-index: 10; }
     @media only screen and (max-width: 1000px) {
       .map-box .contact-box {
         position: relative;
         width: 100%;
-        height: 350px;
+        height: 450px;
         background-color: #faf9f9;
         transform: translateY(-30px); } }
     .map-box .contact-box h2 {
@@ -510,7 +513,7 @@ body {
       margin-top: 2rem; }
       @media only screen and (max-width: 1000px) {
         .map-box .contact-box__info {
-          margin-top: 6rem; } }
+          margin-top: 4rem; } }
       .map-box .contact-box__info ul {
         list-style: none; }
       .map-box .contact-box__info li {
@@ -546,3 +549,7 @@ body {
   .footer .copyright {
     color: #faf9f9;
     font-size: 1.5rem; }
+
+[data-aos].animated {
+  transition-duration: initial;
+  transition-delay: 0.3s; }
