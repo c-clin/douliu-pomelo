@@ -120,10 +120,10 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3); }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 800px) {
       .header .contact-info {
         font-size: 1.2rem; } }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 600px) {
       .header .contact-info {
         display: none; } }
     .header .contact-info span:first-child {
@@ -137,23 +137,88 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     transition: all 0.6s;
     padding: 2rem 0 2rem 0; }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 600px) {
       .header .navigation {
         position: fixed;
         left: 0;
-        top: 0; } }
+        top: 0;
+        padding: 0; } }
+    .header .navigation__icon {
+      display: block;
+      margin: 0 auto;
+      height: 7rem;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      display: none;
+      padding: 1rem; }
+      @media only screen and (max-width: 600px) {
+        .header .navigation__icon {
+          display: block; } }
+      .header .navigation__icon--line {
+        position: relative;
+        display: inline-block;
+        height: 2px;
+        width: 4rem;
+        background-color: #faf9f9; }
+        .header .navigation__icon--line::before, .header .navigation__icon--line::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          transition: all 0.2s;
+          display: inline-block;
+          height: 2px;
+          width: 100%;
+          background-color: #faf9f9; }
+        .header .navigation__icon--line::before {
+          top: -1rem; }
+        .header .navigation__icon--line::after {
+          top: 1rem; }
+      .header .navigation__icon:hover, .header .navigation__icon:focus {
+        outline: none; }
+        .header .navigation__icon:hover > .navigation__icon--line, .header .navigation__icon:focus > .navigation__icon--line {
+          background-color: transparent; }
+          .header .navigation__icon:hover > .navigation__icon--line::before, .header .navigation__icon:focus > .navigation__icon--line::before {
+            transform: rotate(-135deg);
+            top: 0; }
+          .header .navigation__icon:hover > .navigation__icon--line::after, .header .navigation__icon:focus > .navigation__icon--line::after {
+            transform: rotate(135deg);
+            top: 0; }
     .header .navigation__list {
       list-style: none;
       display: flex;
       justify-content: center; }
+      @media only screen and (max-width: 600px) {
+        .header .navigation__list {
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          opacity: 0;
+          max-height: 0px;
+          visibility: hidden;
+          transition: all 0.7s; } }
+      .header .navigation__list.active {
+        transition: all 0.7s;
+        top: 0;
+        opacity: 1;
+        display: flex;
+        visibility: visible;
+        max-height: 500px; }
     .header .navigation__item {
       display: inline-block;
       font-size: 2.5rem; }
       @media only screen and (max-width: 600px) {
         .header .navigation__item {
           font-size: 2.1rem; } }
+      @media only screen and (max-width: 600px) {
+        .header .navigation__item {
+          display: block;
+          margin: 0.5rem 0; } }
       .header .navigation__item:not(:last-child) {
         margin-right: 3rem; }
+        @media only screen and (max-width: 600px) {
+          .header .navigation__item:not(:last-child) {
+            margin-right: 0; } }
       .header .navigation__item a {
         text-decoration: none;
         color: #faf9f9;

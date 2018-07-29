@@ -36,6 +36,25 @@ $(document).ready(function() {
   });
   window;
 
+  // toggle nav burger icon
+  $('.navigation__icon').click(() => {
+    $('.navigation__list').toggleClass('active');
+  });
+
+  $('.nav-link').click(() => {
+    $('.navigation__list').removeClass('active');
+  });
+
+  $(document).click(e => {
+    const navigation = $('.navigation');
+    console.log(navigation.id);
+    console.log(e.target.id);
+    if (e.target.id !== 'nav' && e.target.id !== 'icon') {
+      console.log(e.target.id != 'nav');
+      $('.navigation__list').removeClass('active');
+    }
+  });
+
   // open modal to view images
   $('#album-modal').iziModal({ width: 1000 });
   if ($(window).width() > 1200) {
