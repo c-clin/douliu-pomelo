@@ -173,7 +173,13 @@
     url(../img/pomelo-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center center;
+
+  @media only screen and (max-width: 900px) {
+    background-attachment: scroll !important;
+    background-position: 20% !important;
+  }
 
   &__block {
     background-color: #fff;
@@ -186,6 +192,18 @@
     padding: 6rem;
     margin-bottom: 9rem;
     box-shadow: 1rem 1.5rem 5rem rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      > .story__block__image > img {
+        transform: scale(1.19);
+        filter: blur(5px) brightness(50%);
+      }
+
+      > .story__block__image > figcaption {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+    }
 
     @media only screen and (max-width: 900px) {
       transform: skewX(-6deg);
@@ -234,17 +252,17 @@
         transition: all 0.3s;
       }
 
-      &:hover {
-        img {
-          transform: scale(1.19);
-          filter: blur(5px) brightness(50%);
-        }
+      // &:hover {
+      //   img {
+      //     transform: scale(1.19);
+      //     filter: blur(5px) brightness(50%);
+      //   }
 
-        figcaption {
-          transform: translate(-50%, -50%);
-          opacity: 1;
-        }
-      }
+      //   figcaption {
+      //     transform: translate(-50%, -50%);
+      //     opacity: 1;
+      //   }
+      // }
 
       figcaption {
         position: absolute;
@@ -274,6 +292,28 @@
 
       @media only screen and (max-width: 600px) {
         transform: skewX(0);
+      }
+    }
+  }
+}
+
+.origin {
+  color: $color-grey-dark-1;
+
+  &-container {
+    border: 1px dashed $color-primary-orange-dark;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 5px rgba($color-primary-orange-dark, 0.1),
+      0 0 0 10px #fff, 0 0 2px 10px $color-primary-orange-dark;
+    width: 70%;
+    margin: 0 auto;
+    padding: 4rem 4rem;
+
+    &-text {
+      font-size: 2.3rem;
+      color: $color-grey-dark-1;
+
+      @media only screen and (max-width: 700px) {
+        font-size: 1.9rem;
       }
     }
   }
@@ -363,10 +403,27 @@
   background-color: $color-grey-light-1;
   padding: 7rem 7rem;
 
+  &-heading {
+    font-size: 4rem;
+    display: inline-block;
+    border-bottom: 2px solid $color-primary-orange;
+    margin-bottom: 2rem;
+    padding-right: 3rem;
+
+    @media only screen and (max-width: 800px) {
+      font-size: 3.5rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+      font-size: 3rem;
+    }
+  }
+
   .price {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     margin-bottom: 3rem;
+    flex-wrap: wrap;
 
     @media only screen and (max-width: 800px) {
       flex-direction: column;
@@ -378,12 +435,13 @@
   .price-box {
     font-size: 2.3rem;
     background-color: #fff;
-    flex: 0 0 25%;
+    flex: 0 0 22%;
     border-radius: 3px;
     text-align: center;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
     color: $color-grey-dark-1;
     transition: all 0.3s;
+    margin: 3rem 1.5rem;
 
     @media only screen and (max-width: 1200px) {
       flex: 0 0 30%;
@@ -437,11 +495,11 @@
       border-bottom: 1px solid $color-grey-light-3;
       padding: 1.5rem;
       background-color: $color-grey-light-2;
-      font-size: 3.5rem;
+      font-size: 2.8rem;
       transition: color 0.5s;
 
       @media only screen and (max-width: 1200px) {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
     }
 
@@ -481,10 +539,10 @@
       padding: 1.5rem;
       font-weight: 300;
       color: $color-primary-orange;
-      font-size: 5rem;
+      font-size: 4rem;
 
       @media only screen and (max-width: 1200px) {
-        font-size: 4.3rem;
+        font-size: 3.8rem;
       }
 
       p {
@@ -494,6 +552,18 @@
       span {
         font-size: 2rem;
       }
+    }
+  }
+
+  .shipping-text {
+    font-size: 2.5rem;
+
+    @media only screen and (max-width: 1200px) {
+      margin-bottom: 2rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+      font-size: 2rem;
     }
   }
 }
