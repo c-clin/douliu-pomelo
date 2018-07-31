@@ -273,13 +273,18 @@ body {
       animation: moveInRight 1s ease-out;
       animation-fill-mode: backwards;
       z-index: 50; }
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 900px) {
         .header .text-box .heading-primary-sub {
           font-size: 2.5rem; } }
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 700px) {
         .header .text-box .heading-primary-sub {
-          font-size: 2.5rem;
-          letter-spacing: 0; } }
+          font-size: 2.2rem;
+          letter-spacing: 0;
+          margin: 1.5rem auto; } }
+      @media only screen and (max-width: 600px) {
+        .header .text-box .heading-primary-sub {
+          font-size: 2rem;
+          width: 80%; } }
     .header .text-box i {
       margin-top: 2rem;
       color: rgba(255, 255, 0, 0.9);
@@ -290,9 +295,12 @@ body {
       animation: moveInTop 1s ease-out;
       animation-fill-mode: backwards;
       animation-delay: 1s; }
-      @media only screen and (max-width: 700px) {
+      @media only screen and (max-width: 800px) {
         .header .text-box i {
           font-size: 5.2rem; } }
+      @media only screen and (max-width: 600px) {
+        .header .text-box i {
+          font-size: 4rem; } }
       .header .text-box i:hover {
         transform: rotate(0); }
 
@@ -326,7 +334,7 @@ body {
     @media only screen and (max-width: 900px) {
       .story__block {
         transform: skewX(-6deg); } }
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 1000px) {
       .story__block {
         flex-direction: column; } }
     @media only screen and (max-width: 600px) {
@@ -337,7 +345,7 @@ body {
       position: relative;
       border-radius: 50%;
       box-sizing: content-box;
-      border: 8px solid #e67e22;
+      border: 6px solid #e67e22;
       border-radius: 50%;
       transform: skewX(12deg);
       overflow: hidden;
@@ -349,7 +357,7 @@ body {
         .story__block__image {
           border: 4px solid #e67e22;
           transform: skewX(6deg); } }
-      @media only screen and (max-width: 750px) {
+      @media only screen and (max-width: 1000px) {
         .story__block__image {
           width: 17rem; } }
       @media only screen and (max-width: 600px) {
@@ -371,13 +379,20 @@ body {
         color: #faf9f9;
         font-weight: 300;
         text-align: center; }
+        @media only screen and (max-width: 1200px) {
+          .story__block__image figcaption {
+            font-size: 2.2rem; } }
+        @media only screen and (max-width: 1000px) {
+          .story__block__image figcaption {
+            font-size: 1.6rem; } }
     .story__block__text {
       flex: 1;
       font-size: 2rem;
       transform: translateX(3rem) skewX(12deg);
       line-height: 34px; }
-      @media only screen and (max-width: 750px) {
+      @media only screen and (max-width: 1000px) {
         .story__block__text span {
+          margin: 1.5rem auto;
           text-align: center; } }
       @media only screen and (max-width: 900px) {
         .story__block__text {
@@ -464,7 +479,7 @@ body {
   background-color: #faf9f9;
   padding: 7rem 7rem; }
   .pricing-heading {
-    font-size: 3.7rem;
+    font-size: 3.4rem;
     display: inline-block;
     color: #333;
     margin-bottom: 2rem;
@@ -473,7 +488,7 @@ body {
     background-color: rgba(230, 126, 34, 0.4); }
     @media only screen and (max-width: 800px) {
       .pricing-heading {
-        font-size: 3.3rem;
+        font-size: 3.2rem;
         text-align: center; } }
     @media only screen and (max-width: 500px) {
       .pricing-heading {
@@ -525,7 +540,7 @@ body {
       .pricing .price-box__image--1 {
         background-image: url(../img/price-1.jpg); }
       .pricing .price-box__image--2 {
-        background-image: url(../img/price-1.jpg); }
+        background-image: url(../img/price-2.jpg); }
       .pricing .price-box__image--3 {
         background-image: url(../img/price-1.jpg); }
     .pricing .price-box__title {
@@ -619,7 +634,7 @@ body {
     width: 60%;
     text-align: center;
     line-height: 40px;
-    font-size: 2.7rem; }
+    font-size: 2.5rem; }
     @media only screen and (max-width: 700px) {
       .award__text {
         width: 90%;
@@ -634,7 +649,7 @@ body {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #e06900, rgba(0, 0, 0, 0)); }
   .award__image {
     width: 500px;
-    margin: 0 auto;
+    margin: 3rem auto;
     border-radius: 3px;
     box-shadow: 1rem 2rem 7rem rgba(0, 0, 0, 0.4); }
     @media only screen and (max-width: 600px) {

@@ -228,13 +228,19 @@
       animation-fill-mode: backwards;
       z-index: 50;
 
-      @media only screen and (max-width: 800px) {
+      @media only screen and (max-width: 900px) {
         font-size: 2.5rem;
       }
 
-      @media only screen and (max-width: 800px) {
-        font-size: 2.5rem;
+      @media only screen and (max-width: 700px) {
+        font-size: 2.2rem;
         letter-spacing: 0;
+        margin: 1.5rem auto;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 2rem;
+        width: 80%;
       }
     }
 
@@ -249,8 +255,12 @@
       animation-fill-mode: backwards;
       animation-delay: 1s;
 
-      @media only screen and (max-width: 700px) {
+      @media only screen and (max-width: 800px) {
         font-size: 5.2rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 4rem;
       }
 
       &:hover {
@@ -305,7 +315,7 @@
       transform: skewX(-6deg);
     }
 
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 1000px) {
       flex-direction: column;
     }
 
@@ -318,7 +328,7 @@
       position: relative;
       border-radius: 50%;
       box-sizing: content-box;
-      border: 8px solid $color-primary-orange;
+      border: 6px solid $color-primary-orange;
       border-radius: 50%;
       transform: skewX(12deg);
       overflow: hidden;
@@ -333,7 +343,7 @@
         transform: skewX(6deg);
       }
 
-      @media only screen and (max-width: 750px) {
+      @media only screen and (max-width: 1000px) {
         width: 17rem;
       }
 
@@ -348,18 +358,6 @@
         transition: all 0.3s;
       }
 
-      // &:hover {
-      //   img {
-      //     transform: scale(1.19);
-      //     filter: blur(5px) brightness(50%);
-      //   }
-
-      //   figcaption {
-      //     transform: translate(-50%, -50%);
-      //     opacity: 1;
-      //   }
-      // }
-
       figcaption {
         position: absolute;
         top: 50%;
@@ -371,6 +369,14 @@
         color: $color-grey-light-1;
         font-weight: 300;
         text-align: center;
+
+        @media only screen and (max-width: 1200px) {
+          font-size: 2.2rem;
+        }
+
+        @media only screen and (max-width: 1000px) {
+          font-size: 1.6rem;
+        }
       }
     }
 
@@ -381,7 +387,8 @@
       line-height: 34px;
 
       span {
-        @media only screen and (max-width: 750px) {
+        @media only screen and (max-width: 1000px) {
+          margin: 1.5rem auto;
           text-align: center;
         }
       }
@@ -511,7 +518,7 @@
   padding: 7rem 7rem;
 
   &-heading {
-    font-size: 3.7rem;
+    font-size: 3.4rem;
     display: inline-block;
     color: $color-grey-dark-1;
     margin-bottom: 2rem;
@@ -520,7 +527,7 @@
     background-color: rgba($color-primary-orange, 0.4);
 
     @media only screen and (max-width: 800px) {
-      font-size: 3.3rem;
+      font-size: 3.2rem;
       text-align: center;
     }
 
@@ -593,7 +600,7 @@
       }
 
       &--2 {
-        background-image: url(../img/price-1.jpg);
+        background-image: url(../img/price-2.jpg);
       }
 
       &--3 {
@@ -729,7 +736,7 @@
     width: 60%;
     text-align: center;
     line-height: 40px;
-    font-size: 2.7rem;
+    font-size: 2.5rem;
 
     @media only screen and (max-width: 700px) {
       width: 90%;
@@ -754,7 +761,7 @@
 
   &__image {
     width: 500px;
-    margin: 0 auto;
+    margin: 3rem auto;
     border-radius: 3px;
     box-shadow: 1rem 2rem 7rem rgba(0, 0, 0, 0.4);
 

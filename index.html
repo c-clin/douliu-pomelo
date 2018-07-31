@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123129555-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-123129555-1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -53,7 +62,9 @@
                 斗六嘉東文旦園
             </h1>
             <p class="heading-primary-sub">榮獲106年大斗六地區文旦品質評鑑比賽特等獎</p>
-            <i class="fas fa-trophy"></i>
+            <a class="nav-link" href="#award">
+                <i class="fas fa-trophy"></i>
+            </a>
         </div>
     </header>
 
@@ -165,7 +176,7 @@
 
                 <div class="price-box__price">
                     <p>
-                        800
+                        600
                         <span>元</span>
                     </p>
                 </div>
@@ -243,7 +254,7 @@
 
         <div class="price" data-aos="slide-up">
             <div class="price-box">
-                <div class="price-box__image price-box__image--1"></div>
+                <div class="price-box__image price-box__image--2"></div>
                 <h4 class="price-box__title">
                     6~9顆
                 </h4>
@@ -341,11 +352,13 @@
         </ul>
     </section>
 
-    <section class="section award">
+    <section class="section award" id="award">
         <h2 class="heading-secondary dark">賀</h2>
 
         <p class="award__text">斗六嘉東文旦園生產文旦榮獲
-            <span class="orange-text">2017年大斗六地區文旦比賽特等獎</span>，品質深獲肯定，為回饋顧客多年愛護，我們維持原價，與您共渡美好中秋。
+            <span class="orange-text">2017年大斗六地區文旦比賽
+                <strong>特等獎</strong>
+            </span>，品質深獲肯定，為回饋顧客多年愛護，我們維持原價，與您共渡美好中秋。
         </p>
 
         <hr>
@@ -356,10 +369,10 @@
 
     </section>
 
-    <div class="map-box" id="contact">
+    <div class="map-box">
         <div class="map" data-aos="fade-right" data-aos-once="true" data-aos-duration="1500"></div>
 
-        <div class="contact-box" data-aos="fade-left" data-aos-once="true" data-aos-duration="1500">
+        <div class="contact-box" id="contact" data-aos="fade-left" data-aos-once="true" data-aos-duration="1500">
             <h2 class="heading-secondary dark">聯絡我們</h2>
             <div class="contact-box__info">
                 <ul>
@@ -407,7 +420,7 @@
         crossorigin="anonymous"></script>
     <script src="js/aos.js"></script>
     <script src="js/iziModal.min.js" type="text/javascript"></script>
-    <script src="http://maps.google.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmtMAUa5xDBO8mN84wbgbUDxTWRA2CIvg"></script>
     <script src="js/gmaps.js"></script>
     <script src="./js/script.js"></script>
 </body>
