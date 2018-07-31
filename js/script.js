@@ -47,10 +47,7 @@ $(document).ready(function() {
 
   $(document).click(e => {
     const navigation = $('.navigation');
-    console.log(navigation.id);
-    console.log(e.target.id);
     if (e.target.id !== 'nav' && e.target.id !== 'icon') {
-      console.log(e.target.id != 'nav');
       $('.navigation__list').removeClass('active');
     }
   });
