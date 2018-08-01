@@ -38,17 +38,23 @@ $(document).ready(function() {
 
   // toggle nav burger icon
   $('.navigation__icon').click(() => {
-    $('.navigation__list').toggleClass('active');
+    $('.navigation__icon').toggleClass('open');
+    if ($('.navigation__icon').hasClass('open')) {
+      $('.navigation__list').addClass('active');
+    } else {
+      $('.navigation__list').removeClass('active');
+    }
   });
 
   $('.nav-link').click(() => {
     $('.navigation__list').removeClass('active');
+    $('.navigation__icon').removeClass('open');
   });
 
   $(document).click(e => {
-    const navigation = $('.navigation');
     if (e.target.id !== 'nav' && e.target.id !== 'icon') {
       $('.navigation__list').removeClass('active');
+      $('.navigation__icon').removeClass('open');
     }
   });
 
